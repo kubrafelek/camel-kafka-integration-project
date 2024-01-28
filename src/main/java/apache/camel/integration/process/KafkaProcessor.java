@@ -1,12 +1,13 @@
 package apache.camel.integration.process;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class KafkaProcess implements Processor {
+public class KafkaProcessor implements Processor {
     @Override
     public void process(Exchange exchange) throws Exception {
         String message = exchange.getIn().getBody(String.class);
